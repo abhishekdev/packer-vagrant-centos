@@ -6,10 +6,10 @@
 
 ## Use
 
-Use hosted virtual box image
+Use hosted VirtualBox image
 
 ```shell
-vagrant init abhishekdev/centos-6-x64-puppet; vagrant up --provider google
+vagrant init abhishekdev/centos-6-x64-puppet; vagrant up --provider virtualbox
 ```
 
 ## Build
