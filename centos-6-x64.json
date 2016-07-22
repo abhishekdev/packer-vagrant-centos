@@ -1,10 +1,10 @@
 {
     "variables": {
-        "isoname": "CentOS-6.5-x86_64-minimal.iso",
-        "boxname": "centos-6.5-x64"
+        "isoname": "CentOS-6.8-x86_64-minimal.iso",
+        "boxname": "centos-6-x64"
     },
     "builders": [{
-        "name": "centos-6.5-x64",
+        "name": "centos-6.8-x64",
         "type": "virtualbox-iso",
         "virtualbox_version_file": ".vbox_version",
         "headless": false,
@@ -12,8 +12,8 @@
         "guest_os_type": "RedHat_64",
         "disk_size": 40960,
 
-        "iso_urls": ["repos/{{user `isoname`}}", "http://mirrors.kernel.org/centos/6.5/isos/x86_64/{{user `isoname`}}"],
-        "iso_checksum": "f21a71e8e31df73297bdd1ccd4a64a36831284bd",
+        "iso_urls": ["repos/{{user `isoname`}}", "http://linux.mirrors.es.net/centos/6.8/isos/x86_64/{{user `isoname`}}"],
+        "iso_checksum": "28cd663c2267676414496f0929ce7bb285bf2506",
         "iso_checksum_type": "sha1",
 
         "boot_command": [
