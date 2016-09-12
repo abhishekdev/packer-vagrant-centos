@@ -1,9 +1,8 @@
 #!/usr/bin/env bash
 
-mkdir /tmp/virtualbox
-VERSION=$(cat /home/vagrant/.vbox_version)
-mount -o loop /home/vagrant/VBoxGuestAdditions_$VERSION.iso /tmp/virtualbox
-sh /tmp/virtualbox/VBoxLinuxAdditions.run
-umount /tmp/virtualbox
-rmdir /tmp/virtualbox
-rm /home/vagrant/*.iso
+VBOX_VERSION=$(cat /home/vagrant/.vbox_version)
+cd /tmp
+mount -o loop /home/vagrant/VBoxGuestAdditions_$VBOX_VERSION.iso /mnt
+sh /mnt/VBoxLinuxAdditions.run
+umount /mnt
+rm -rf /home/vagrant/VBoxGuestAdditions_*.iso
