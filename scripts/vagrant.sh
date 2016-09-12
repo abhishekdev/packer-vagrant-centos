@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+date > /etc/vagrant_box_build_time
+
 mkdir -pm 700 /home/vagrant/.ssh
 wget --no-check-certificate -O authorized_keys 'https://github.com/mitchellh/vagrant/raw/master/keys/vagrant.pub'
 mv authorized_keys /home/vagrant/.ssh
